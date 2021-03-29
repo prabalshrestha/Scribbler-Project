@@ -2,13 +2,18 @@
 <html>
 
 <head>
-    <link href='..\css\bloglist.css' rel='stylesheet' type='text/css'>    
+
+
+
+    <!-- Place all bootstrap for fonts in this file -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href='..\css\bloglist.css' rel='stylesheet' type='text/css'>
     <link href='..\css\header.css' rel='stylesheet' type='text/css'>
     <link href='..\css\font.css' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="..\font-awesome-4.7.0/css/font-awesome.min.css">
-    
-    <style>
-    </style>
+
 </head>
 <body>
     <div id="main-container-div">
@@ -23,62 +28,18 @@
             </div>    
             
             <div class="button-container">
-                
-            <button class="button button1" onclick="opensignIn()">Sign In</button>
-            <button class="button" onclick="opensignUp()">Sign Up</button>
+
+
+                <button class="button button1" data-toggle="modal" data-target="#signin">Sign In</button>
+                <button class="button" data-toggle="modal" data-target="#signup">Sign Up</button>
                 
             </div>
 
         </div>
     </div>
-    <div class="signup-Container">
-        <div class="signupMod">
-        <h1 style="color: black;">Get Started</h1>
-            <hr>
-        <form name="signupp">
-            <label>Full Name</label><br>
-            <input type="text" name="fullname" placeholder="Enter Full Name" class="inputs" required><br>
-            
-            <label>Username</label><br>
-            <input type="text" name="username" placeholder="Enter Username" class="inputs" required><br>
-            <label>Password</label><br>
-            <input type="password" name="password" placeholder="Enter Password" class="inputs" required><br>
-            <label>Confirm Password</label><br>
-            <input type="password" name="confirmpass" placeholder="Confirm Password" class="inputs" required><br>
-            
-            <input type="submit" value="Sign Up" name="submit" class="inputs" id="signupButton">
-            
-            
-            
-            
-        </form>
-        
-        </div>
-    	<p class="signupclose" onclick="closesignUp()">+</p>
 
-    </div>
 
-    <div class="signin-Container">
-    	
-        <div class="signin-Mod">
-        <h1>Welcome Back!</h1>
-            <hr>
-            
-        <form name="signIn">
-            <label>Username</label><br>
-            <input type="text" name="username" placeholder="Enter Username" class="inputs" required><br>
-            
-            <label>Password</label><br>
-            <input type="password" name="password" placeholder="Enter Password" class="inputs" required><br>
-            
-             <input type="submit" value="Sign In" name="submit" class="inputs" id="signupButton"><br>
-            
-        </form>
-        <h3> Not a member? <a style="color: blue;cursor: pointer;" onclick="modalSignUp()">Sign Up</a></h3>
-            <p class="signinclose" onclick="closesignIn()">+</p>
-        
-        </div>
-    </div>
+
 
 
     <div class="allPostsContainer">
@@ -191,6 +152,99 @@
         </div>
         
 </div>
+
+    <!--SignUp-->
+    <div class="modal fade" id="signup" role="dialog">
+        <div class="modal-dialog ">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+
+                <div class="modal-body " style="padding:2% 5%">
+                    <div>
+                        <button type="button" class="x"  data-dismiss="modal"> &times;</button>
+                        <h1 class="text-center">Get Started</h1>
+                    </div>
+                    <hr>
+                    <form name="create">
+
+                        <div class="form-g">
+                            <label for="Name">Full Name</label>
+                            <input type="text" class="inputs " id="Name" placeholder="Enter Full Name" required>
+                        </div>
+
+                        <div class="form-g">
+                            <label for="Username">Username</label>
+                            <input type="text" class=" inputs " id="Username"  placeholder="Enter Username" required>
+                        </div>
+
+                        <div class="form-g ">
+                            <label for="Password">Password</label>
+                            <input type="password" class=" inputs " id="Password"  placeholder="Enter Password" required>
+                        </div>
+
+                        <div class="form-g ">
+                            <label for="CPassword">Confirm Password</label>
+                            <input type="password" class=" inputs " id="CPassword"  placeholder="Confirm Password" required>
+                        </div>
+
+
+
+                        <div class="submit text-center">
+                            <input type="submit" value="Sign Up" name="submit" class="btn btn-success sign " id="signup-btn">
+                        </div>
+                    </form>
+
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+
+    <!--SignIn-->
+    <div class="modal fade" id="signin" role="dialog">
+        <div class="modal-dialog" >
+
+            <!-- Modal content-->
+            <div class="modal-content">
+
+                <div class="modal-body " style="padding:2% 5%">
+                    <div>
+                        <button type="button" class="x"  data-dismiss="modal"> &times;</button>
+                        <h1 class="text-center">Welcome Back!</h1>
+                    </div>
+                    <hr>
+                    <form name="create">
+                        <div class="form-g">
+                            <label for="Username">Username</label>
+                            <input type="text" class=" inputs " id="Username"  placeholder="Enter Username" required>
+                        </div>
+
+                        <div class="form-g ">
+                            <label for="Password">Password</label>
+                            <input type="password" class=" inputs " id="Password"  placeholder="Enter Password" required>
+                        </div>
+
+                        <div class="submit text-center">
+                            <input type="submit" value="Sign Up" name="submit" class="btn btn-success sign " id="signup-btn">
+                        </div>
+                        <div class="submit text-center">
+                            <span class="fot">Not a member? </span><a class="fot" data-toggle="modal" data-dismiss="modal" data-target="#signup">Sign Up</a>
+                        </div>
+                    </form>
+
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Place all bootstrap for rest of the elements in this file -->
+
     <script src="..\js\bloglist.js">  </script>
     <script src="..\js\header.js"> </script>
 </body>
