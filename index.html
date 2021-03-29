@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- Place all CSS for header in this file -->
+    <link href='css\header.css' rel='stylesheet' type='text/css'>
+
+    <!-- Place all CSS for the rest of the elements in this file -->
+    <link href='css\index.css' rel='stylesheet' type='text/css'>
+
+    <!-- Place all CSS for fonts in this file -->
+    <link href='css\font.css' rel='stylesheet' type='text/css'>
+
+    <!-- Place all bootstrap for fonts in this file -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Satisfy&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<div id="main-container-div">
+
+    <div class="header">
+
+        <!-- Insert code for Sign Up, Sign In button here. Add code for "ScriBBler" heading and the sub-heading -->
+        <div class="heading">
+
+            <h1 id="scribbler">ScriBBler</h1>
+            <h4 id="subText">Explore, Imagine, Create</h4>
+
+        </div>
+
+        <div class="button-container">
+
+            <button class="button button1" onclick="opensignIn()">Sign In</button>
+            <button class="button" onclick="opensignUp()">Sign Up</button>
+
+        </div>
+
+    </div>
+
+    <div class="postButtons">
+
+        <!-- Insert code for All Posts & Create Post button here -->
+        <a href="html/bloglist.html">
+            <button class="postButs">All Posts</button>
+        </a>
+        <button class="postButs" data-toggle="modal" data-target="#createPost">Create Post</button>
+
+    </div>
+</div>
+
+<div class="modal fade" id="createPost" role="dialog">
+    <div class="modal-dialog modal-lg">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+
+            <div class="modal-body " style="padding:2% 5%">
+                <div>
+                <button type="button" class="close" id="close" data-dismiss="modal"> &times;</button>
+                <h2 class="text-center">Pen Your Post</h2>
+                </div>
+                <hr>
+                <form name="create">
+
+                    <div class="form-group ">
+                        <label for="title">Title</label>
+                        <input type="email" class=" form-control " id="title">
+                    </div>
+
+                    <div class="form-group">
+                    <label for="Content">Content</label>
+                        <textarea rows="12" cols="110" class=" tarea" id="Content"></textarea>
+                </div>
+                    <div class="submit text-center">
+                    <input type="submit" value="Create" name="submit" class="btn btn-success" id="createButton">
+                    </div>
+                </form>
+
+            </div>
+
+
+        </div>
+
+    </div>
+</div>
+<div class="signup-Container">
+    <div class="signupMod">
+        <h1 style="color: black;">Get Started</h1>
+        <hr>
+        <form name="signupp">
+            <label>Full Name</label><br>
+            <input type="text" name="fullname" placeholder="Enter Full Name" class="inputs" required><br>
+
+            <label>Username</label><br>
+            <input type="text" name="username" placeholder="Enter Username" class="inputs" required><br>
+            <label>Password</label><br>
+            <input type="password" name="password" placeholder="Enter Password" class="inputs" required><br>
+            <label>Confirm Password</label><br>
+            <input type="password" name="confirmpass" placeholder="Confirm Password" class="inputs" required><br>
+
+            <input type="submit" value="Sign Up" name="submit" class="inputs" id="signupButton">
+
+
+        </form>
+
+    </div>
+    <p class="signupclose" onclick="closesignUp()">+</p>
+
+</div>
+
+<div class="signin-Container">
+
+    <div class="signin-Mod">
+        <h1>Welcome Back!</h1>
+        <hr>
+
+        <form name="signIn">
+            <label>Username</label><br>
+            <input type="text" name="username" placeholder="Enter Username" class="inputs" required><br>
+
+            <label>Password</label><br>
+            <input type="password" name="password" placeholder="Enter Password" class="inputs" required><br>
+
+            <input type="submit" value="Sign In" name="submit" class="inputs" id="signupButton"><br>
+
+        </form>
+        <h3> Not a member? <a style="color: blue;cursor: pointer;" onclick="modalSignUp()">Sign Up</a></h3>
+        <p class="signinclose" onclick="closesignIn()">+</p>
+
+    </div>
+</div>
+
+
+<!--Create Post-->
+
+
+<!-- Place all Javascript for header in this file -->
+<script src="js\header.js"></script>
+<!-- Place all Javascript for rest of the elements in this file -->
+<script src="js\index.js"></script>
+
+<!-- Place all bootstrap for rest of the elements in this file -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>
